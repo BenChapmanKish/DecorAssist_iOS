@@ -20,14 +20,12 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.usernameField.returnKeyType = .done
-        self.passwordField.returnKeyType = .done
-        self.nameField.returnKeyType = .done
         self.usernameField.delegate = self
         self.passwordField.delegate = self
         self.nameField.delegate = self
         self.usernameField.resignFirstResponder()
-        self.usernameField.resignFirstResponder()
+        self.passwordField.resignFirstResponder()
+        self.nameField.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool

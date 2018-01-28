@@ -39,8 +39,13 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 self.response = data
                 
-                self.welcomeLabel.text = String.localizedStringWithFormat("Welcome, %@", data["user"]!["name"] as! String)
+                guard let user = data["user"] as? [String: String] else {
+                    return
+                }
+                
+                self.welcomeLabel.text = String.localizedStringWithFormat("Welcome, %@", user["name"]!)
                 self.tableView.reloadData()
+                
             }
         }
     }
@@ -78,8 +83,14 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         if (rooms.count > 0) {
             //let roomType: String = rooms[indexPath.row]["type"] as! String
-            let roomType: String = "bedroom" // hardcode since the server's broke and Erick's asleep
-            let furniture: [String] = rooms[indexPath.row]["furniture"] as! [String]
+            guard let roomType = rooms[indexPath.row]["type"] as? String else {
+                cell.configureCell(roomType: "-", furniture: ["-"])
+                return cell
+            }
+            guard let furniture = rooms[indexPath.row]["furniture"] as? [String] else {
+                cell.configureCell(roomType: "-", furniture: ["-"])
+                return cell
+            }
             cell.configureCell(roomType: roomType, furniture: furniture)
         } else {
             cell.configureCell(roomType: "-", furniture: ["-"])
