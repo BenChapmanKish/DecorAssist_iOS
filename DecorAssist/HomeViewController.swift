@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -39,7 +39,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 self.response = data
                 
-                guard let user = data["user"] as? [String: String] else {
+                guard let user = self.response["user"] as? [String: String] else {
                     return
                 }
                 
@@ -48,6 +48,17 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "pushRoomInformation") {
+            guard let room = self.response["room"] as? [String: AnyObject] else {
+                return
+            }
+            let destinationVC: RoomViewController = segue.destination as! RoomViewController
+            destinationVC.room = room
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,6 +108,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         return cell
+    }
+    
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "pushRoomInformation", sender: self)
     }
 
 }

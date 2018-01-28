@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		90F38E6C84BD2B5816A161A4 /* Pods_DecorAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C101366D548F8B73CD65664D /* Pods_DecorAssist.framework */; };
+		B5571ECC201E54A6002F636E /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5571ECB201E54A6002F636E /* RoomViewController.swift */; };
 		B5D5D8CF201E1E6900C82737 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D5D8CD201E1E6900C82737 /* RoomTableViewCell.swift */; };
 		B5D5D8D0201E1E6900C82737 /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5D5D8CE201E1E6900C82737 /* RoomTableViewCell.xib */; };
 		B5E38F64201DDEC8009AAC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E38F63201DDEC8009AAC8B /* AppDelegate.swift */; };
-		B5E38F66201DDEC8009AAC8B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E38F65201DDEC8009AAC8B /* FirstViewController.swift */; };
-		B5E38F68201DDEC8009AAC8B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E38F67201DDEC8009AAC8B /* SecondViewController.swift */; };
+		B5E38F66201DDEC8009AAC8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E38F65201DDEC8009AAC8B /* LoginViewController.swift */; };
+		B5E38F68201DDEC8009AAC8B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E38F67201DDEC8009AAC8B /* HomeViewController.swift */; };
 		B5E38F6B201DDEC8009AAC8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E38F69201DDEC8009AAC8B /* Main.storyboard */; };
 		B5E38F6D201DDEC8009AAC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E38F6C201DDEC8009AAC8B /* Assets.xcassets */; };
 		B5E38F70201DDEC8009AAC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E38F6E201DDEC8009AAC8B /* LaunchScreen.storyboard */; };
@@ -40,12 +41,13 @@
 /* Begin PBXFileReference section */
 		6D696A72BAE881EE48FD42C1 /* Pods-DecorAssist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecorAssist.release.xcconfig"; path = "Pods/Target Support Files/Pods-DecorAssist/Pods-DecorAssist.release.xcconfig"; sourceTree = "<group>"; };
 		90BA5C51572337BCC062D13F /* Pods-DecorAssist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecorAssist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DecorAssist/Pods-DecorAssist.debug.xcconfig"; sourceTree = "<group>"; };
+		B5571ECB201E54A6002F636E /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		B5D5D8CD201E1E6900C82737 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		B5D5D8CE201E1E6900C82737 /* RoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
 		B5E38F60201DDEC8009AAC8B /* DecorAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecorAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5E38F63201DDEC8009AAC8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5E38F65201DDEC8009AAC8B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		B5E38F67201DDEC8009AAC8B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B5E38F65201DDEC8009AAC8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B5E38F67201DDEC8009AAC8B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B5E38F6A201DDEC8009AAC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5E38F6C201DDEC8009AAC8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5E38F6F201DDEC8009AAC8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,9 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				B5E38F63201DDEC8009AAC8B /* AppDelegate.swift */,
-				B5E38F65201DDEC8009AAC8B /* FirstViewController.swift */,
-				B5E38F67201DDEC8009AAC8B /* SecondViewController.swift */,
+				B5E38F65201DDEC8009AAC8B /* LoginViewController.swift */,
+				B5E38F67201DDEC8009AAC8B /* HomeViewController.swift */,
 				B5E38F69201DDEC8009AAC8B /* Main.storyboard */,
+				B5571ECB201E54A6002F636E /* RoomViewController.swift */,
 				B5E38F6C201DDEC8009AAC8B /* Assets.xcassets */,
 				B5E38F6E201DDEC8009AAC8B /* LaunchScreen.storyboard */,
 				B5E38F71201DDEC8009AAC8B /* Info.plist */,
@@ -351,9 +354,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5D5D8CF201E1E6900C82737 /* RoomTableViewCell.swift in Sources */,
-				B5E38F68201DDEC8009AAC8B /* SecondViewController.swift in Sources */,
+				B5E38F68201DDEC8009AAC8B /* HomeViewController.swift in Sources */,
 				B5E38F64201DDEC8009AAC8B /* AppDelegate.swift in Sources */,
-				B5E38F66201DDEC8009AAC8B /* FirstViewController.swift in Sources */,
+				B5571ECC201E54A6002F636E /* RoomViewController.swift in Sources */,
+				B5E38F66201DDEC8009AAC8B /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

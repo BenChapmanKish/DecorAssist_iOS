@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/Ben/Documents/Xcode/DecorAssist/DecorAssist/RoomTableViewController.swift">
-   </FileRef>
-   <FileRef
       location = "group:DecorAssist.xcodeproj">
    </FileRef>
    <FileRef
